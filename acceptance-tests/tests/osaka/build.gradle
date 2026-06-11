@@ -1,4 +1,6 @@
 
+import org.web3j.solidity.gradle.plugin.EVMVersion
+
 plugins {
   id 'org.web3j' version '5.0.2'
   id 'org.web3j.solidity' version '0.6.1'
@@ -19,7 +21,7 @@ solidity {
   version = '0.8.25'
   // 'cancun' is intentional - the osaka contracts currently only use tstore/tload (EIP-1153, introduced in Cancun)
   // and 0.8.25 doesn't support osaka
-  evmVersion = 'cancun'
+  evmVersion = EVMVersion.CANCUN
 }
 
 // Both subprojects download solc 0.8.25 to the same path; serialise to avoid a race condition.

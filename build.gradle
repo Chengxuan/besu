@@ -262,7 +262,7 @@ configure(allprojects - project(':platform')) {
     // Below this line are currently only license header tasks
     format 'ShellScripts', {
       target '**/*.sh'
-      targetExclude '**/src/reference-test/**', '**/src/main/generated/**', '**/src/test/generated/**', '**/src/jmh/generated/**', '**/bin/default/**'
+      targetExclude '**/src/reference-test/**', '**/src/main/generated/**', '**/src/test/generated/**', '**/src/jmh/generated/**', '**/bin/default/**', '**/bin/referenceTest/**'
       trimTrailingWhitespace()
       endWithNewline()
 
@@ -270,7 +270,7 @@ configure(allprojects - project(':platform')) {
     }
     format 'Solidity', {
       target '**/*.sol'
-      targetExclude '**/src/reference-test/**', '**/src/main/generated/**', '**/src/test/generated/**', '**/src/jmh/generated/**', '**/bin/default/**'
+      targetExclude '**/src/reference-test/**', '**/src/main/generated/**', '**/src/test/generated/**', '**/src/jmh/generated/**', '**/bin/default/**', '**/bin/referenceTest/**'
       trimTrailingWhitespace()
       endWithNewline()
 

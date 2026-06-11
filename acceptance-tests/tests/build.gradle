@@ -11,6 +11,8 @@
  * specific language governing permissions and limitations under the License.
  */
 
+import org.web3j.solidity.gradle.plugin.EVMVersion
+
 plugins {
   id 'org.web3j' version '5.0.2'
   id 'org.web3j.solidity' version '0.6.1'
@@ -24,7 +26,7 @@ solidity {
   resolvePackages = false
   // TODO: remove the forced version, when DEV network is upgraded to support latest forks
   version = '0.8.19'
-  evmVersion = 'london'
+  evmVersion = EVMVersion.LONDON
 }
 
 testing {
